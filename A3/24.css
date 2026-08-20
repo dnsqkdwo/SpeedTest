@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    display: none;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    transition: 0.2s;
+    background: #fff;
+}
+
+.ts {
+    display: block;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.tb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    left: 4px;
+    transition: 0.2s;
+}
+
+#toggle:checked ~ .ts {
+    border-color: aliceblue;
+}
+
+#toggle:checked ~ .ts .tb {
+    left: 56px;
+    background: aliceblue;
+}
+
+#toggle:checked ~ .page {
+    background: #000;    
+}
+
