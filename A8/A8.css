@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 850px;
+    height: 750px;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+.inner {
+    width: 750px;
+    height: 700px;
+}
+
+.object_container {
+    width: 100%;
+    height: 390px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.box h4 {
+    position: absolute;
+    top: 10px;
+    left: 125px; 
+}
+
+.option {
+    position: absolute;
+    left: 125px;
+    font-size: 13px;
+    color: #676767;
+    top: 40px;
+}
+
+.amount {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    gap: 15px;
+    bottom: 30px;
+}
+
+.amount2 {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.box button {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: #969696;
+    font-size: 15px;
+}
+
+.box:last-child {
+    border-bottom: none;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+/* object */
+
+.price {
+    width: 100%;
+    height: 180px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid lightgray;
+}
+
+.price_top {
+    width: 100%;
+    max-width: 715px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;  
+    font-size: 13px;  
+    color: #919191;
+}
+
+.price_top:nth-child(2) {
+    border-bottom: 1px solid black;
+}
+
+.price_bot {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 715px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* 총가격 */
+
+.payment {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;  
+}
+
+.payment button {
+    width: 370px;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+.payment button:nth-child(1){
+    background-color: gray;
+}
+
+.payment button:nth-child(2){
+    background-color: green;
+}
+
+
+

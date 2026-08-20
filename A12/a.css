@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #252F39;
+}
+
+.loader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    animation: spin 2s infinite, squeeze 0.5s infinite;
+}
+
+.dot {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.pink   { background: #FFD1DC; }
+.blue   { background: #C3E0E5; }
+.orange { background: #FFDAB9; }
+.purple { background: #E6DAF7; }
+
+@keyframes spin {
+    0% {rotate: 0deg;}
+    20%, 25% {rotate: 90deg;}
+    45%, 50% {rotate: 180deg;}
+    70%, 75% {rotate: 270deg;}
+    95%, 100% {rotate: 360deg;}
+}
+
+@keyframes squeeze {
+    0% {
+        gap: 30px;
+    }
+
+    30% {
+        gap: 15px;
+    }
+
+    100% {
+        gap: 30px;
+    }
+}

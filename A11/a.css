@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    padding: 10px 30px;
+    background: skyblue;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width: 769px) {
+    .menu {
+        display: none;
+        width: 100%;
+        margin-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    #hamburger:checked ~ .menu {
+        display: flex;
+    }
+}

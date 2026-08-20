@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.slider_container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+/* 전체 틀 */
+
+input[type="radio"] {
+    display: none;
+}
+
+/* 라디오가 안보이게 함 */
+
+.slider_wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+/* 내용 정렬, 기본 상태로 모든 슬라이드 안보이게 하고 클릭 막기, 화면 넘김을 부드럽게 */
+/* absolute로 슬라이드를 모두 겹쳐 opacity로 체크된 슬라이드만 보이도록 함 */
+
+#slide1:checked ~ .slider_wrap:nth-of-type(1) {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* 첫번째 슬라이드가 체크되면 첫번째 슬라이드가 보이고 클릭 가능 */
+
+#slide2:checked ~ .slider_wrap:nth-of-type(2) {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* 두번째 슬라이드가 체크되면 두번째 슬라이드가 보이고 클릭 가능 */
+#slide3:checked ~ .slider_wrap:nth-of-type(3) {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* 세번째 슬라이드가 체크되면 세번째 슬라이드가 보이고 클릭 가능 */
+
+.slider {
+    width: 300px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.font_box {
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.font_box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.font_box p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+/* 카드 디자인 */
+
+.prev, .next {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: none;
+}
+
+/* 버튼 디자인, 기본 상태로 안보이도록 함 */
+
+.controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 1;
+}
+/* 버튼 위치잡기 */
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+} 
+/* 버튼 호버시 배경 연하고 크기 커짐 */
+
+#slide1:checked ~ .controls #prev1 {
+    display: block;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* 첫번째 슬라이드가 체크되면 이전 버튼이 보이게 함, 첫번째 슬라이드에서 뒤로가지 못하게 클릭 막음 */
+
+#slide1:checked ~ .controls #next1 {
+    display: block;
+}
+
+/* 첫번째 슬라이드가 체크되면 다음 버튼이 보이게 함 */
+
+#slide2:checked ~ .controls #prev2 {
+    display: block;
+}
+/* 두번째 슬라이드가 체크되면 이전 버튼이 보이게 함 */
+#slide2:checked ~ .controls #next2 {
+    display: block;
+}
+/* 두번째 슬라이드가 체크되면 다음 버튼이 보이게 함 */
+#slide3:checked ~ .controls #prev3 {
+    display: block;
+}
+/* 세번째 슬라이드가 체크되면 이전 버튼이 보이게 함 */
+#slide3:checked ~ .controls #next3 {
+    display: block;
+    opacity: 0.3;
+    pointer-events: none;
+}
+/* 세번째 슬라이드가 체크되면 다음 버튼이 보이게 함, 세번째 슬라이드에서 앞으로 가지 못하게 클릭 막음 */

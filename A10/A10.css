@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.polygon {
+    width: 200px;
+    height: 200px;
+    background: #ff4444;
+    animation: morphPolygon 10s infinite;
+}
+
+@keyframes morphPolygon {
+    0%, 2% {
+        clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%); /* 삼각형 */
+    }
+
+    22%, 33% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%); /* 사각형 */
+    }
+
+    53%, 63% {
+        clip-path: polygon(50% 0%, 50% 0%, 100% 42%, 79% 100%, 21% 100%, 0% 42%); /* 오각형 */
+    }
+
+    83%, 91% {
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* 육각형 */
+    }
+
+    91%, 100% {
+        clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
+    }
+}
