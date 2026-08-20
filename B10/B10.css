@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 60px;
+    font-family: sans-serif;
+    background: #f5f5f5;
+}
+
+canvas {
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: #fff;
+    touch-action: none;
+    cursor: crosshair;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#clearBtn {
+    background: #ddd;
+}
+
+#saveBtn {
+    background: #4a90d9;
+    color: #fff;
+}

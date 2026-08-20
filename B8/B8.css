@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_container {
+    display: flex;
+    gap: 10px;
+}
+
+.button_container button {
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+#notice {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.success {
+    background-color: #d4edda; 
+    color: #155724;
+}
+
+.success button, .fail button {
+    font-size: 19px;
+}
+
+.fail {
+    background-color: #f8d7da; 
+    color: #721c24;
+}

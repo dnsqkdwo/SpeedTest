@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.drop_zone {
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    border: 2px dashed #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #bbb;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.img_box {
+    margin-top: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    cursor: grab;
+    object-fit: cover;
+}

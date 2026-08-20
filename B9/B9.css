@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f6fa;
+}
+
+.wrap {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.item p {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #5b6b7f;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+/* 즐겨찾기 된 별만 노란색 */
+.on {
+    color: #f5b301;
+}
