@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #f2f2f2;
+}
+
+video {
+    width: 600px;
+    border-radius: 10px;
+    background: #000;
+}
+
+#timeText {
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
