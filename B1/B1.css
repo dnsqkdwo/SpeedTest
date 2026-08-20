@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+* {
+    margin: 0 auto;
+}
+
+input {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    width: 200px;
+}
+
+#check {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+.wrap {
+    text-align: center;
+}
