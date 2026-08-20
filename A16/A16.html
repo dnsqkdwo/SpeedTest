@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A16 - 단계별 진행률 표시기</title>
+    <link rel="stylesheet" href="A16.css">
+</head>
+<body>
+    <div class="stepper">
+        <div class="step completed">
+            <div class="circle">&#10003;</div>
+            <div class="text">
+                <p class="title">Card Details</p>
+                <p class="status">Completed</p>
+            </div>
+        </div>
+
+        <div class="step active">
+            <div class="circle">2</div>
+            <div class="text">
+                <p class="title">Form Review</p>
+                <p class="status">In Progress</p>
+            </div>
+        </div>
+
+        <div class="step pending">
+            <div class="circle">3</div>
+            <div class="text">
+                <p class="title">Authentication</p>
+                <p class="status">Pending</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

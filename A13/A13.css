@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    display: none;
+}
+
+.openButton,
+.closeButton {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(30, 191, 255);
+    color: #fff;
+    cursor: pointer;
+}
+
+.closeButton {
+    align-self: flex-end;
+    background: rgb(255, 93, 93);
+}
+
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+span {
+    font-size: 40px;
+}
+
+/* 체크되면 모달 열고, 로그인 버튼은 숨김 */
+#toggle:checked ~ .modal {
+    display: flex;
+}
+
+#toggle:checked ~ .openButton {
+    display: none;
+}

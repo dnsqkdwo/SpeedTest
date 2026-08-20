@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6fa;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.stepper {
+    width: 280px;
+}
+
+/* 세로로 이어지는 연결선: 마지막 단계 빼고 원 아래에 선 하나씩 */
+.step {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    padding-bottom: 36px;
+}
+
+.step:last-child {
+    padding-bottom: 0;
+}
+
+.step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 15px;
+    width: 2px;
+    height: calc(100% - 32px);
+    background-color: var(--clr);
+}
+
+/* 진행 중 다음 선만 절반만 채워서 "가는 중" 느낌을 줌 */
+.active::before {
+    background: linear-gradient(to bottom, var(--clr) 50%, #dfe4ea 50%);
+}
+
+.circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: var(--clr);
+}
+
+.title {
+    font-weight: 600;
+    color: #2f3542;
+    margin-bottom: 4px;
+}
+
+.status {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--clr);
+}
+
+.completed { --clr: #22c55e; }
+.active    { --clr: #2563eb; }
+.pending   { --clr: #93c5fd; }

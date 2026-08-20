@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333a4d;
+    font-family: "Segoe UI", sans-serif;
+    perspective: 1200px;
+}
+
+/* 원기둥의 중심축. preserve-3d 가 있어야 자식이 입체로 배치됨 */
+.track {
+    position: relative;
+    width: 200px;
+    height: 140px;
+    transform-style: preserve-3d;
+    animation: roll 25s linear infinite;
+}
+
+/* 마이너스 각도 = 왼쪽으로 회전 */
+@keyframes roll {
+    to { transform: rotateY(-360deg); }
+}
+
+.track:hover {
+    animation-play-state: paused;
+}
+
+/* 360 / 12 = 30도씩 돌린 뒤 앞으로 400px 밀어내면 원형으로 둘러섬 */
+.card {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc(var(--i) * 30deg)) translateZ(400px);
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 어두운 반투명 막 + 가운데에 image번호 (data-no 값을 글자로 가져옴) */
+.card::after {
+    content: "image" attr(data-no);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
